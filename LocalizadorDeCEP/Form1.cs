@@ -15,7 +15,7 @@ namespace LocalizadorDeCEP
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string cep = txbCEP.Text.Replace("-", ""); // Salvar entrada do usuario
+            string cep = txbCEP.Text.Replace("-", "").Replace(" ", ""); // Salvar entrada do usuario
             string url = $"https://viacep.com.br/ws/{cep}/json/"; // Salvar o link do cep do usuario
             if (cep.Length < 8)
             {
